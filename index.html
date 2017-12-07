@@ -21,13 +21,16 @@
 
       var vector = new ol.layer.Heatmap({
         source: new ol.source.Vector({
-          url: 'https://openlayers.org/en/v4.6.2/examples/data/kml/2012_Earthquakes_Mag5.kml',
+          url: 'https://raw.githubusercontent.com/GeoAdaptive/semi_rastermap/master/data/INFR_middleschool_Paraguay.geojson?token=AgSQKzl_FQsz963uuPbdfVoXt-9qyegdks5aMtSpwA%3D%3D',
+
+          // the original example file is here https://openlayers.org/en/v4.6.2/examples/data/kml/2012_Earthquakes_Mag5.kml
+
           format: new ol.format.KML({
             extractStyles: false
           })
         }),
-        blur: parseInt(blur.value, 10),
-        radius: parseInt(radius.value, 10)
+        blur: parseInt(blur.value, 1),
+        radius: parseInt(radius.value, 1)
       });
 
       vector.getSource().on('addfeature', function(event) {
